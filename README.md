@@ -15,3 +15,8 @@ and CallLog. Let's implement a CallLog app by adding features in each requiremen
 
 
  Music Aggregator
+ 
+ 
+ Learning Platform
+ 
+ 
