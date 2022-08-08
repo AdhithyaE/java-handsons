@@ -1,0 +1,1857 @@
+public static List<Album> prefill() throws ParseException{ 
+
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy"); 
+
+List<Album> list = new ArrayList<Album>(); 
+
+list.add(new Album("Illuminate",sdf.parse("2014"),new ArrayList<Song>())); 
+
+list.add(new Album("Divide",sdf.parse("2015"),new ArrayList<Song>())); 
+
+list.add(new Album("Evolve",sdf.parse("2014"),new ArrayList<Song>())); 
+
+list.add(new Album("Collage",sdf.parse("2012"),new ArrayList<Song>())); 
+
+list.add(new Album("Memories",sdf.parse("2014"),new ArrayList<Song>())); 
+
+list.add(new Album("Listen",sdf.parse("2016"),new ArrayList<Song>())); 
+
+list.add(new Album("Meteora",sdf.parse("2017"),new ArrayList<Song>())); 
+
+list.add(new Album("Faded",sdf.parse("2014"),new ArrayList<Song>())); 
+
+list.add(new Album("Despacito",sdf.parse("2018"),new ArrayList<Song>())); 
+
+list.add(new Album("Cheap thrills",sdf.parse("2015"),new ArrayList<Song>())); 
+
+list.add(new Album("Night Visions",sdf.parse("2012"),new ArrayList<Song>())); 
+
+return list; 
+
+} 
+
+ 
+
+ 
+
+public static List<Artist> prefill() throws ParseException{ 
+
+SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy"); 
+
+List<Artist> list = new ArrayList<Artist>(); 
+
+list.add(new Artist("Ed Sheeran","Singer","Male",sdf.parse("17-02-1991"),new ArrayList<Song>())); 
+
+list.add(new Artist("Steve Mac","Musician","Male",sdf.parse("15-01-1972"),new ArrayList<Song>())); 
+
+list.add(new Artist("Burruss","Singer","Female",sdf.parse("17-05-1976"),new ArrayList<Song>())); 
+
+list.add(new Artist("Beyonce","Singer","Female",sdf.parse("04-09-1981"),new ArrayList<Song>())); 
+
+list.add(new Artist("Zoey","Musician","Female",sdf.parse("10-10-1994"),new ArrayList<Song>())); 
+
+list.add(new Artist("Shawn Mendes","Singer","Male",sdf.parse("08-10-1998"),new ArrayList<Song>())); 
+
+list.add(new Artist("Frankie Dunne","Musician","Male",sdf.parse("10-09-1978"),new ArrayList<Song>())); 
+
+list.add(new Artist("Luis Fonsi","Singer","Male",sdf.parse("15-04-1978"),new ArrayList<Song>())); 
+
+list.add(new Artist("Daddy Yankee","Singer","Male",sdf.parse("03-02-1977"),new ArrayList<Song>())); 
+
+list.add(new Artist("Zuleyka","Dancer","Female",sdf.parse("03-10-1987"),new ArrayList<Song>())); 
+
+list.add(new Artist("Dan Reynolds","Singer","Male",sdf.parse("14-07-1987"),new ArrayList<Song>())); 
+
+list.add(new Artist("Wayne Sermon","Musician","Male",sdf.parse("15-06-1984"),new ArrayList<Song>())); 
+
+list.add(new Artist("Andrew","Musician","Male",sdf.parse("03-02-1978"),new ArrayList<Song>())); 
+
+list.add(new Artist("Chris Martin","Singer","Male",sdf.parse("02-03-1977"),new ArrayList<Song>())); 
+
+list.add(new Artist("Alan Walker","Lyricist","Male",sdf.parse("24-08-1997"),new ArrayList<Song>())); 
+
+list.add(new Artist("Jesper","Musician","Male",sdf.parse("16-09-1988"),new ArrayList<Song>())); 
+
+list.add(new Artist("Rob","Singer","Male",sdf.parse("20-01-1979"),new ArrayList<Song>())); 
+
+list.add(new Artist("Joe","Musician","Male",sdf.parse("15-03-1977"),new ArrayList<Song>())); 
+
+list.add(new Artist("Sia","Musician","Female",sdf.parse("18-12-1975"),new ArrayList<Song>())); 
+
+list.add(new Artist("Maddie","Dancer","Female",sdf.parse("30-09-2002"),new ArrayList<Song>())); 
+
+list.add(new Artist("David Guetta","Lyricist","Male",sdf.parse("07-11-1967"),new ArrayList<Song>())); 
+
+list.add(new Artist("Sam Martin","Musician","Male",sdf.parse("07-02-1983"),new ArrayList<Song>())); 
+
+return list; 
+
+} 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Music Aggregator - Requirement 1 
+
+Requirement 1: 
+
+Let’s start off by creating two?Song?objects and check whether they are equal. 
+? 
+
+1.????Create a?Song?Class with the following attributes: 
+
+Member Field Name 
+
+Type 
+
+title 
+
+String 
+
+genre 
+
+String 
+
+duration 
+
+java.util.Date 
+
+rating 
+
+Double 
+
+2.????Mark all the attributes as private 
+
+3.????Create / Generate appropriate Getters & Setters 
+
+4.????Add a default constructor and a parameterized constructor to take in all attributes in the given order:? 
+Song ( String title, String genre, java.util.Date duration, Double rating ) 
+
+5.????When the “Song” object is printed, it should display the following details:?[Override the toString method] 
+Print format: 
+c 
+
+6.????Two Songs are considered same if they have the same title, and duration. Implement the logic in the appropriate function. (Case – Insensitive)?[Override the equals method] 
+ 
+The input format consists of Song details separated by comma in the below order, 
+title, genre, duration, rating 
+
+The Input to your program would be details of two Songs, you need to display their details as given in "5th point(refer above)" and compare the two Songs and display if the Songs are same or different. 
+ 
+Note:?There is an empty line between display statements. Print the empty lines in main function. 
+????????????? Display one digit after the decimal point for Double datatype. 
+???????????? duration of the song is given in minutes & seconds 
+ 
+Sample Input and Output: 
+Enter song 1 detail: 
+Shape of You,Pop,03:53,4.9 
+Enter song 2 detail: 
+Shape of You,Pop,03:53,4.9 
+ 
+Song 1 
+Title: Shape of You 
+Genre: Pop 
+Duration: 03:53 
+Rating: 4.9 
+ 
+Song 2 
+Title: Shape of You 
+Genre: Pop 
+Duration: 03:53 
+Rating: 4.9 
+ 
+Song 1 is same as Song 2 
+ 
+Sample Input and Output 2: 
+Enter song 1 detail: 
+Faded,Progressive House,03:32,4.8 
+Enter song 2 detail: 
+Shape of You,Pop,03:53,4.9 
+ 
+Song 1 
+Title: Faded 
+Genre: Progressive House 
+Duration: 03:32 
+Rating: 4.8 
+ 
+Song 2 
+Title: Shape of You 
+Genre: Pop 
+Duration: 03:53 
+Rating: 4.9 
+ 
+Song 1 and Song 2 are different 
+? 
+
+????Test Cases 
+
+Assign Groups? 
+
+SNo 
+
+Name 
+
+Input 
+
+Output 
+
+Purpose 
+
+Sample 
+
+1 
+
+TC3 
+
+Dangerous,SynthPop,03:23,4.2 
+DangeroUS,SynthPop,03:23,4.5 
+
+Enter?song?1?detail: 
+Enter?song?2?detail: 
+ 
+Song?1 
+Title:?Dangerous 
+Genre:?SynthPop 
+Duration:?03:23 
+Rating:?4.2 
+ 
+Song?2 
+Title:?DangeroUS 
+Genre:?SynthPop 
+Duration:?03:23 
+Rating:?4.5 
+ 
+Song?1?is?same?as?Song?2 
+
+General 
+
+ 
+
+2 
+
+TC4 
+
+Believer,Rock,03:37,5.0 
+Believer,Rock,03:40,5.0 
+
+Enter?song?1?detail: 
+Enter?song?2?detail: 
+ 
+Song?1 
+Title:?Believer 
+Genre:?Rock 
+Duration:?03:37 
+Rating:?5.0 
+ 
+Song?2 
+Title:?Believer 
+Genre:?Rock 
+Duration:?03:40 
+Rating:?5.0 
+ 
+Song?1?and?Song?2?are?different 
+
+General 
+
+ 
+
+3 
+
+TC5 
+
+Thunder,SynthPop,03:07,4.7 
+ThUNder,SynthPop,03:07,4.8 
+
+Enter?song?1?detail: 
+Enter?song?2?detail: 
+ 
+Song?1 
+Title:?Thunder 
+Genre:?SynthPop 
+Duration:?03:07 
+Rating:?4.7 
+ 
+Song?2 
+Title:?ThUNder 
+Genre:?SynthPop 
+Duration:?03:07 
+Rating:?4.8 
+ 
+Song?1?is?same?as?Song?2 
+
+General 
+
+ 
+
+4 
+
+TC2 
+
+Faded,Progressive?House,03:32,4.8 
+Shape?of?You,Pop,03:53,4.9 
+
+Enter?song?1?detail: 
+Enter?song?2?detail: 
+ 
+Song?1 
+Title:?Faded 
+Genre:?Progressive?House 
+Duration:?03:32 
+Rating:?4.8 
+ 
+Song?2 
+Title:?Shape?of?You 
+Genre:?Pop 
+Duration:?03:53 
+Rating:?4.9 
+ 
+Song?1?and?Song?2?are?different 
+
+General 
+
+ 
+
+5 
+
+TC1 
+
+Shape?of?You,Pop,03:53,4.9 
+Shape?of?You,Pop,03:53,4.9 
+
+Enter?song?1?detail: 
+Enter?song?2?detail: 
+ 
+Song?1 
+Title:?Shape?of?You 
+Genre:?Pop 
+Duration:?03:53 
+Rating:?4.9 
+ 
+Song?2 
+Title:?Shape?of?You 
+Genre:?Pop 
+Duration:?03:53 
+Rating:?4.9 
+ 
+Song?1?is?same?as?Song?2 
+
+General 
+
+ 
+
+6 
+
+TC6 
+
+Thunder,SynthPop,03:07,4.7 
+Perfect,Classical,04:23,4.6 
+
+Enter?song?1?detail: 
+Enter?song?2?detail: 
+ 
+Song?1 
+Title:?Thunder 
+Genre:?SynthPop 
+Duration:?03:07 
+Rating:?4.7 
+ 
+Song?2 
+Title:?Perfect 
+Genre:?Classical 
+Duration:?04:23 
+Rating:?4.6 
+ 
+Song?1?and?Song?2?are?different 
+
+General 
+
+ 
+
+ 
+
+? 
+
+Music?Aggregator?- Requirement 2 
+
+ 
+Requirement 2: 
+In this requirement, we are gonna sort song based on their rating and duration. 
+ 
+a) Create a class Song with the following private attributes:? 
+
+Member Field Name 
+
+Type 
+
+title 
+
+String 
+
+genre 
+
+String 
+
+duration 
+
+Date 
+
+rating 
+
+Double 
+
+ 
+Mark all the attributes as private, Create / Generate appropriate Getters & Setters,?Add a default constructor 
+and a parameterized constructor to take in all attributes in the given order:??public Song(String title, String genre, Date duration, Double rating)? 
+ 
+b) Create the following static method in Song class,? 
+
+Method Name 
+
+Description 
+
+Song createSong(String line) 
+
+This method accepts a String. The song detail separated by commas is passed as the argument. Split the details and create a song object and return it. 
+
+ 
+c) The Song class should implement the?Comparable?interface which sorts the Song list based on duration.?While comparing, 
+all the duration attributes in the list are unique. 
+ 
+d) Create a class?RatingComparator?which implements?Comparator?interface and sort the 
+Song list based on rating. While comparing, all the rating attributes in the list are unique. 
+ 
+Get the number of Songs and song details and create a song list. Sort the Songs according to the given option and display the list.? 
+ 
+The song details must be given as comma-separated value as given below, 
+tittle,genre,duration,rating 
+ 
+Print Format: 
+System.out.format("%-20s %-10s %-12s %-12s\n","Title","Genre","Duration","Rating"); 
+ 
+Note:???The print statements should be in main method.? 
+?????????????? duration of the song is given in minutes & seconds?. 
+ 
+Sample Input & Output:? 
+Enter the number of songs:? 
+4 
+Perfect,Classical,04:23,4.6 
+Believer,Rock,03:37,5.0 
+Galway Girl,Pop,02:50,4.4 
+Despacito,Pop,03:47,4.3? 
+Enter a type to sort:? 
+1.Sort by Duration? 
+2.Sort by Rating? 
+1? 
+
+Title 
+
+Genre 
+
+Duration 
+
+Rating 
+
+Galway Girl 
+
+Pop 
+
+02:50 
+
+4.4 
+
+Believer 
+
+Rock 
+
+03:37 
+
+5.0 
+
+Despacito 
+
+Pop 
+
+03:47 
+
+4.3 
+
+Perfect 
+
+Classical 
+
+04:23 
+
+4.6 
+
+????Test Cases 
+
+Assign Groups? 
+
+SNo 
+
+Name 
+
+Input 
+
+Output 
+
+Purpose 
+
+Sample 
+
+1 
+
+TC6 
+
+8 
+Radioactive,Rock,03:05,4.5 
+Numb,Rock,03:08,3.9 
+Cheap?Thrills,SynthPop,03:30,3.8 
+Walking?the?wire,Pop,3:52,3.7 
+Castle?on?hill,Rock,03:20,3.5 
+Mercy,Pop,03:11,3.4 
+Treat?you?better,Rock,04:01,3.6 
+Ruin,SynthPop,04:03,3.0 
+2 
+
+Enter?the?number?of?songs: 
+Enter?a?type?to?sort: 
+1.Sort?by?Duration 
+2.Sort?by?Rating 
+Title????????????????Genre??????Duration?????Rating?????? 
+Ruin?????????????????SynthPop???04:03????????3.0????????? 
+Mercy????????????????Pop????????03:11????????3.4????????? 
+Castle?on?hill???????Rock???????03:20????????3.5????????? 
+Treat?you?better?????Rock???????04:01????????3.6????????? 
+Walking?the?wire?????Pop????????03:52????????3.7????????? 
+Cheap?Thrills????????SynthPop???03:30????????3.8????????? 
+Numb?????????????????Rock???????03:08????????3.9????????? 
+Radioactive??????????Rock???????03:05????????4.5????????? 
+
+General 
+
+ 
+
+2 
+
+TC2 
+
+4 
+Perfect,Classical,04:23,4.6 
+Believer,Rock,03:37,5.0 
+Galway?Girl,Pop,02:50,4.4 
+Despacito,Pop,03:47,4.3 
+2 
+
+Enter?the?number?of?songs: 
+Enter?a?type?to?sort: 
+1.Sort?by?Duration 
+2.Sort?by?Rating 
+Title????????????????Genre??????Duration?????Rating?????? 
+Despacito????????????Pop????????03:47????????4.3????????? 
+Galway?Girl??????????Pop????????02:50????????4.4????????? 
+Perfect??????????????Classical??04:23????????4.6????????? 
+Believer?????????????Rock???????03:37????????5.0?? 
+
+General 
+
+ 
+
+3 
+
+TC1 
+
+4 
+Perfect,Classical,04:23,4.6 
+Believer,Rock,03:37,5.0 
+Galway?Girl,Pop,02:50,4.4 
+Despacito,Pop,03:47,4.3 
+1 
+
+Enter?the?number?of?songs: 
+Enter?a?type?to?sort: 
+1.Sort?by?Duration 
+2.Sort?by?Rating 
+Title????????????????Genre??????Duration?????Rating?????? 
+Galway?Girl??????????Pop????????02:50????????4.4????????? 
+Believer?????????????Rock???????03:37????????5.0????????? 
+Despacito????????????Pop????????03:47????????4.3????????? 
+Perfect??????????????Classical??04:23????????4.6??? 
+
+General 
+
+ 
+
+4 
+
+TC4 
+
+10 
+Shape?of?You,Pop,03:53,4.9 
+Closer,Pop,04:04,4.1 
+Something,EDM,04:07,4.0 
+Dangerous,SynthPop,03:23,4.2 
+Faded,Rock,03:32,4.8 
+Perfect,Classical,04:23,4.6 
+Believer,Rock,03:37,5.0 
+Galway?Girl,Pop,02:50,4.4 
+Despacito,Pop,03:47,4.3 
+Thunder,SynthPop,03:07,4.7 
+2 
+
+Enter?the?number?of?songs: 
+Enter?a?type?to?sort: 
+1.Sort?by?Duration 
+2.Sort?by?Rating 
+Title????????????????Genre??????Duration?????Rating?????? 
+Something????????????EDM????????04:07????????4.0????????? 
+Closer???????????????Pop????????04:04????????4.1????????? 
+Dangerous????????????SynthPop???03:23????????4.2????????? 
+Despacito????????????Pop????????03:47????????4.3????????? 
+Galway?Girl??????????Pop????????02:50????????4.4????????? 
+Perfect??????????????Classical??04:23????????4.6????????? 
+Thunder??????????????SynthPop???03:07????????4.7????????? 
+Faded????????????????Rock???????03:32????????4.8????????? 
+Shape?of?You?????????Pop????????03:53????????4.9????????? 
+Believer?????????????Rock???????03:37????????5.0? 
+
+General 
+
+ 
+
+5 
+
+TC5 
+
+8 
+Radioactive,Rock,03:05,4.5 
+Numb,Rock,03:08,3.9 
+Cheap?Thrills,SynthPop,03:30,3.8 
+Walking?the?wire,Pop,3:52,3.7 
+Castle?on?hill,Rock,03:20,3.5 
+Mercy,Pop,03:11,3.4 
+Treat?you?better,Rock,04:01,3.6 
+Ruin,SynthPop,04:03,3.0 
+1 
+
+Enter?the?number?of?songs: 
+Enter?a?type?to?sort: 
+1.Sort?by?Duration 
+2.Sort?by?Rating 
+Title????????????????Genre??????Duration?????Rating?????? 
+Radioactive??????????Rock???????03:05????????4.5????????? 
+Numb?????????????????Rock???????03:08????????3.9????????? 
+Mercy????????????????Pop????????03:11????????3.4????????? 
+Castle?on?hill???????Rock???????03:20????????3.5????????? 
+Cheap?Thrills????????SynthPop???03:30????????3.8????????? 
+Walking?the?wire?????Pop????????03:52????????3.7????????? 
+Treat?you?better?????Rock???????04:01????????3.6????????? 
+Ruin?????????????????SynthPop???04:03????????3.0????????? 
+
+General 
+
+ 
+
+6 
+
+TC3 
+
+10 
+Shape?of?You,Pop,03:53,4.9 
+Closer,Pop,04:04,4.1 
+Something,EDM,04:07,4.0 
+Dangerous,SynthPop,03:23,4.2 
+Faded,Rock,03:32,4.8 
+Perfect,Classical,04:23,4.6 
+Believer,Rock,03:37,5.0 
+Galway?Girl,Pop,02:50,4.4 
+Despacito,Pop,03:47,4.3 
+Thunder,SynthPop,03:07,4.7 
+1 
+
+Enter?the?number?of?songs: 
+Enter?a?type?to?sort: 
+1.Sort?by?Duration 
+2.Sort?by?Rating 
+Title????????????????Genre??????Duration?????Rating?????? 
+Galway?Girl??????????Pop????????02:50????????4.4????????? 
+Thunder??????????????SynthPop???03:07????????4.7????????? 
+Dangerous????????????SynthPop???03:23????????4.2????????? 
+Faded????????????????Rock???????03:32????????4.8????????? 
+Believer?????????????Rock???????03:37????????5.0????????? 
+Despacito????????????Pop????????03:47????????4.3????????? 
+Shape?of?You?????????Pop????????03:53????????4.9????????? 
+Closer???????????????Pop????????04:04????????4.1????????? 
+Something????????????EDM????????04:07????????4.0????????? 
+Perfect??????????????Classical??04:23????????4.6?????? 
+
+General 
+
+ 
+
+ 
+
+? 
+
+Music Aggregator - Requirement 3 
+
+ 
+In this requirement, you need to find the special collection of songs based on the given dob of artist. 
+ 
+a) Create a class?Song?with the following private attributes,?? 
+
+Member Field Name 
+
+Type 
+
+title 
+
+String 
+
+genre 
+
+String 
+
+duration 
+
+Date 
+
+rating 
+
+Double 
+
+artistList 
+
+List<Artist> 
+
+ 
+?Mark all the attributes as private, 
+?Create / Generate appropriate properties, 
+?Add a default constructor and a parameterized constructor to take in all attributes in the given order: 
+?Song(String title, String genre, Date duration, Double rating, List<Artist> artistList) 
+ 
+b) Create the following static methods in?Song?class,?? 
+
+Method Name 
+
+Description 
+
+public static List<Song> specialCollection(List<Artist> artistList,Date date) 
+
+This method takes artist list and date as parameter and returns a songList of an artist whose dob is matching with the given date. 
+
+ 
+The song details will be given in the following format: 
+title, genre, duration, dob, artist1-artist2-....artistn 
+ 
+b) Create a class?Artist?with the following private attributes,?? 
+
+Member Field Name 
+
+Type 
+
+name 
+
+String 
+
+role 
+
+String 
+
+gender 
+
+String 
+
+dob 
+
+Date 
+
+songList 
+
+List<Song> 
+
+ 
+?Mark all the attributes as private, 
+?Create / Generate appropriate properties, 
+??Add a default constructor and a parameterized constructor to take in all attributes in the given order:? 
+Artist(String name, String role, String gender, Date dob, List<Song> songList)? 
+ 
+b) Create the following static methods in?Artist?class,? 
+
+Method Name 
+
+Description 
+
+public static List<Artist> prefill() 
+
+This method returns the list of Artist objects. 
+
+ 
+Print Format: 
+System.out.format("%-20s %-20s %s\n","Title","Genre","Rating"); 
+ 
+Note:?? While displaying Double values, round it off to one decimal place. 
+???????????? ? ? Use the?prefill()?method to get the list of artist objects and store the song objects in it. 
+??????????????duration of the song is given in minutes & seconds 
+ 
+Sample Input and Output: 
+ 
+Enter the number of songs: 
+3 
+Shape of You,Pop,03:53,4.9,Ed Sheeran-Steve Mac 
+Perfect,Classical,04:23,4.6,Ed Sheeran-Beyonce-Steve Mac 
+Galway Girl,Pop,02:50,4.4,Ed Sheeran-Steve Mac 
+Enter the date for special collection 
+17-02-2018? 
+
+Title 
+
+Genre 
+
+Rating 
+
+Shape of You 
+
+Pop 
+
+4.9 
+
+Perfect 
+
+Classical 
+
+4.6 
+
+Galway Girl 
+
+Pop 
+
+4.4 
+
+????Test Cases 
+
+Assign Groups? 
+
+SNo 
+
+Name 
+
+Input 
+
+Output 
+
+Purpose 
+
+Sample 
+
+1 
+
+TC1 
+
+3 
+Shape of You,Pop,03:53,4.9,Ed Sheeran-Steve Mac 
+Perfect,Classical,04:23,4.6,Ed Sheeran-Beyonce-Steve Mac 
+Galway Girl,Pop,02:50,4.4,Ed Sheeran-Steve Mac 
+17-02-2018 
+
+Enter?the?number?of?songs: 
+Enter?the?date?for?special?collection 
+Title????????????????Genre????????????????Rating 
+Shape?of?You?????????Pop??????????????????4.9 
+Perfect??????????????Classical????????????4.6 
+Galway?Girl??????????Pop??????????????????4.4 
+
+General 
+
+ 
+
+2 
+
+TC3 
+
+5 
+Something just like this,EDM,04:07,4.0,Andrew-Chris Martin 
+Faded,Progressive House,03:32,4.8,Alan Walker-Jesper 
+Thunder,SynthPop,03:07,4.7,Dan Reynolds-Wayne Sermon 
+Radioactive,Rock,03:05,4.5,Dan Reynolds-Wayne Sermon 
+Believer,Rock,03:37,5.0,Dan Reynolds-Wayne Sermon 
+14-07-2018 
+
+Enter?the?number?of?songs: 
+Enter?the?date?for?special?collection 
+Title????????????????Genre????????????????Rating 
+Thunder??????????????SynthPop?????????????4.7 
+Radioactive??????????Rock?????????????????4.5 
+Believer?????????????Rock?????????????????5.0 
+
+General 
+
+ 
+
+3 
+
+TC2 
+
+4 
+Thunder,SynthPop,03:07,4.7,Dan?Reynolds-Wayne?Sermon 
+Radioactive,Rock,03:05,4.5,Dan?Reynolds-Wayne?Sermon 
+Castle?on?hill,Rock,03:20,3.5,Wayne?Sermon 
+Ruin,SynthPop,04:03,3.4,Dan?Reynolds-Wayne?Sermon 
+15-06-2018 
+
+Enter?the?number?of?songs: 
+Enter?the?date?for?special?collection 
+Title????????????????Genre????????????????Rating 
+Thunder??????????????SynthPop?????????????4.7 
+Radioactive??????????Rock?????????????????4.5 
+Castle?on?hill???????Rock?????????????????3.5 
+Ruin?????????????????SynthPop?????????????3.4 
+
+General 
+
+ 
+
+4 
+
+TC4 
+
+7 
+Ruin,SynthPop,04:03,3.4,Shawn?Mendes-Frankie?Dunne 
+Treat?you?better,Rock,04:01,3.6,Shawn?Mendes-Frankie?Dunne 
+Mercy,Pop,03:11,3.4,Shawn?Mendes-Frankie?Dunne 
+Faded,Progressive?House,03:32,4.8,Shawn?Mendes 
+Numb,Rock,03:08,3.9,Steve?Mac 
+Despacito,Pop,03:47,4.3,Luis?Fonsi-Daddy?Yankee 
+Cheap?Thrills,SynthPop,03:30,3.8,Sia-Maddie 
+08-10-2018 
+
+Enter?the?number?of?songs: 
+Enter?the?date?for?special?collection 
+Title????????????????Genre????????????????Rating 
+Ruin?????????????????SynthPop?????????????3.4 
+Treat?you?better?????Rock?????????????????3.6 
+Mercy????????????????Pop??????????????????3.4 
+Faded????????????????Progressive?House????4.8 
+
+General 
+
+ 
+
+ 
+
+? 
+
+Music Aggregator - Requirement 4 
+
+ 
+Requirement 4: 
+In this requirement, we are gonna find the highest rated song of the given artist. 
+ 
+a) Create a class?Song?with the following private attributes:? 
+
+Member Field Name 
+
+Type 
+
+title 
+
+String 
+
+genre 
+
+String 
+
+duration 
+
+Date 
+
+rating 
+
+Double 
+
+artistList 
+
+List<Artist> 
+
+ 
+Mark all the attributes as private, Create / Generate appropriate Getters & Setters,?
+Add a default constructor and a parameterized constructor to take in all attributes in the given order:??
+public Song(String title, String genre, Date duration, Double rating, List<Artist> artistList) 
+ 
+b) Create a class?Artist?with the following private attributes:? 
+
+Member Field Name 
+
+Type 
+
+name 
+
+String 
+
+role 
+
+String 
+
+gender 
+
+String 
+
+dob 
+
+Date 
+
+songList 
+
+List<Song> 
+
+ 
+Mark all the attributes as private, Create / Generate appropriate Getters & Setters,?Add a default
+ constructor and a parameterized constructor to take in all attributes in the given order:?
+public Artist(String name, String role, String gender, Date dob, List<Song> songList) 
+ 
+c) Create the following static method in?Song?class,? 
+
+Method Name 
+
+Description 
+
+Song getBestSong(String artist,List<Artist> artistList) 
+
+this method takes artist name and artistList as argument and returns the best song (maximum rating) of the artist given. 
+
+ 
+d) Create the following static method in?Artist?class,? 
+
+Method Name 
+
+Description 
+
+List<Artist> prefill() 
+
+this method return a list of prefilled artists (given in the template) 
+
+ 
+The song details must be given as comma-separated value as given below, 
+title,genre,duration,rating,artist1-artist2-...-artistn 
+ 
+The artist name list is given in "-" separated format. 
+The print statements should be in main method. 
+Duration of the song is given in minutes & seconds. 
+ 
+Sample Input/Output: 
+ 
+Enter the number of songs: 
+5 
+Shape of You,Pop,03:53,4.9,Ed Sheeran-Steve Mac-Burruss 
+Perfect,Classical,04:23,4.6,Ed Sheeran-Beyonce-Zoey 
+Treat you better,Rock,04:01,3.6,Shawn Mendes-Frankie Dunne 
+Despacito,Pop,03:47,4.3,Luis Fonsi-Daddy Yankee-Zuleyka 
+Believer,Rock,03:37,5.0,Dan Reynolds-Wayne Sermon 
+Enter the name of the artist: 
+Ed Sheeran 
+The best song of Ed Sheeran is Shape of You? 
+
+????Test Cases 
+
+Assign Groups? 
+
+SNo 
+
+Name 
+
+Input 
+
+Output 
+
+Purpose 
+
+Sample 
+
+1 
+
+s2 
+
+5 
+Shape of You,Pop,03:53,4.9,Ed?Dan?Reynolds-Wayne Sermon 
+Perfect,Classical,04:23,4.6,Ed Sheeran-Beyonce-Zoey 
+Treat you better,Rock,04:01,4.6,Shawn Mendes-Frankie Dunne 
+Despacito,Pop,03:47,4.3,Luis Fonsi-Daddy Yankee-Zuleyka 
+Believer,Rock,03:37,5.0,Dan Reynolds-Wayne Sermon 
+Wayne Sermon 
+
+Enter?the?number?of?songs: 
+Enter?the?name?of?the?artist: 
+The?best?song?of?Wayne?Sermon?is?Believer 
+
+General 
+
+ 
+
+2 
+
+s4 
+
+5 
+Walking?the?wire,Pop,3:52,4.7,Ed?Sheeran-Beyonce-Zoey 
+Castle?on?hill,Rock,03:20,4.5,Shawn?Mendes-Frankie?Dunne 
+Mercy,Pop,03:11,4.3,Shawn?Mendes-Frankie?Dunne 
+Ruin,SynthPop,04:03,4.8,Ed?Sheeran-Beyonce-Zoey 
+Galway?Girl,Pop,02:50,4.6,Ed?Sheeran-Steve?Mac-Burruss 
+Shawn?Mendes 
+
+Enter?the?number?of?songs: 
+Enter?the?name?of?the?artist: 
+The?best?song?of?Shawn?Mendes?is?Castle?on?hill 
+
+General 
+
+ 
+
+3 
+
+s5 
+
+5 
+Walking?the?wire,Pop,3:52,4.7,Ed?Sheeran-Beyonce-Zoey 
+Castle?on?hill,Rock,03:20,4.5,Dan?Reynolds-Wayne?Sermon 
+Mercy,Pop,03:11,4.3,Ed?Sheeran-Steve?Mac-Burruss 
+Ruin,SynthPop,04:03,4.8,Ed?Sheeran-Beyonce-Zoey 
+Galway?Girl,Pop,02:50,4.6,Ed?Sheeran-Steve?Mac-Burruss 
+Steve?Mac 
+
+Enter?the?number?of?songs: 
+Enter?the?name?of?the?artist: 
+The?best?song?of?Steve?Mac?is?Galway?Girl 
+
+General 
+
+ 
+
+4 
+
+s3 
+
+5 
+Walking?the?wire,Pop,3:52,4.7,Ed?Sheeran-Beyonce-Zoey 
+Castle?on?hill,Rock,03:20,4.5,Dan?Reynolds-Wayne?Sermon 
+Mercy,Pop,03:11,4.3,Shawn?Mendes-Frankie?Dunne 
+Ruin,SynthPop,04:03,4.8,Ed?Sheeran-Beyonce-Zoey 
+Galway?Girl,Pop,02:50,4.6,Ed?Sheeran-Steve?Mac-Burruss 
+Zoey 
+
+Enter?the?number?of?songs: 
+Enter?the?name?of?the?artist: 
+The?best?song?of?Zoey?is?Ruin 
+
+General 
+
+ 
+
+5 
+
+s1 
+
+5 
+Shape?of?You,Pop,03:53,4.9,Ed?Sheeran-Steve?Mac-Burruss 
+Perfect,Classical,04:23,4.6,Ed?Sheeran-Beyonce-Zoey 
+Treat?you?better,Rock,04:01,3.6,Shawn?Mendes-Frankie?Dunne 
+Despacito,Pop,03:47,4.3,Luis?Fonsi-Daddy?Yankee-Zuleyka 
+Believer,Rock,03:37,5.0,Dan?Reynolds-Wayne?Sermon 
+Ed?Sheeran 
+
+Enter?the?number?of?songs: 
+Enter?the?name?of?the?artist: 
+The?best?song?of?Ed?Sheeran?is?Shape?of?You 
+
+General 
+
+ 
+
+ 
+
+? 
+
+Music?Aggregator?- Requirement 5 
+
+? 
+
+Requirement 5: 
+In this requirement, we are gonna find the best male/female singer (based on their song rating). 
+ 
+a) Create a class?Song?with the following private attributes: 
+
+? 
+
+Member Field Name 
+
+Type 
+
+title 
+
+String 
+
+genre 
+
+String 
+
+duration 
+
+Date 
+
+rating 
+
+Double 
+
+artistList 
+
+List<Artist> 
+
+? 
+
+Mark all the attributes as private, Create / Generate appropriate Getters & Setters,?Add a default constructor and a parameterized constructor to take in all attributes in the given order:??public Song(String title, String genre, Date duration, Double rating, List<Artist> artistList) 
+ 
+b) Create a class?Artist?with the following private attributes: 
+
+? 
+
+Member Field Name 
+
+Type 
+
+name 
+
+String 
+
+role 
+
+String 
+
+gender 
+
+String 
+
+dob 
+
+Date 
+
+songList 
+
+List<Song> 
+
+? 
+
+Mark all the attributes as private, Create / Generate appropriate Getters & Setters,?Add a default constructor and a parameterized constructor to take in all attributes in the given order:?public Artist(String name, String role, String gender, Date dob, List<Song> songList) 
+? 
+
+c) Create the following static method in?Artist?class, 
+
+? 
+
+Method Name 
+
+Description 
+
+List<Artist> prefill() 
+
+this method return a list of prefilled artists (given in the template) 
+
+Artist bestSinger(String gender,List<Artist> artistList) 
+
+this method take the gender and artist list as argument and returns the best singer?(
+role should be singer)?of the given gender. The best singer is determined by the number of songs they sang which have a rating more than 4.5 
+
+? 
+
+The song details must be given as comma-separated value as given below, 
+title,genre,duration,rating,artist1-artist2-...-artistn 
+ 
+The artist name list is given in "-" separated format. 
+The print statements should be in main method. 
+Duration of the song is given in minutes & seconds. 
+ 
+Sample Input/Output: 
+ 
+Enter the number of songs: 
+5 
+Shape of You,Pop,03:53,4.9,Ed Sheeran-Steve Mac-Burruss 
+Perfect,Classical,04:23,4.6,Ed Sheeran-Beyonce-Zoey 
+Treat you better,Rock,04:01,3.6,Shawn Mendes-Frankie Dunne 
+Despacito,Pop,03:47,4.3,Luis Fonsi-Daddy Yankee-Zuleyka 
+Believer,Rock,03:37,5.0,Dan Reynolds-Wayne Sermon 
+Enter the gender of singer: 
+Male 
+The best Male singer is Ed Sheeran 
+? 
+
+????Test Cases 
+
+Assign Groups? 
+
+SNo 
+
+Name 
+
+Input 
+
+Output 
+
+Purpose 
+
+Sample 
+
+1 
+
+s3 
+
+5 
+Shape of You,Pop,03:53,4.9,Ed Sheeran-Steve Mac-Burruss 
+Perfect,Classical,04:23,4.6,Shawn Mendes-Frankie Dunne 
+Treat you better,Rock,04:01,4.6,Shawn Mendes-Frankie Dunne 
+Despacito,Pop,03:47,4.3,Luis Fonsi-Daddy Yankee-Zuleyka 
+Believer,Rock,03:37,5.0,Dan Reynolds-Wayne Sermon 
+Male 
+
+Enter?the?number?of?songs: 
+Enter?the?gender?of?singer: 
+The?best?Male?singer?is?Shawn?Mendes 
+
+General 
+
+ 
+
+2 
+
+s1 
+
+5 
+Shape?of?You,Pop,03:53,4.9,Ed?Sheeran-Steve?Mac-Burruss 
+Perfect,Classical,04:23,4.6,Ed?Sheeran-Beyonce-Zoey 
+Treat?you?better,Rock,04:01,3.6,Shawn?Mendes-Frankie?Dunne 
+Despacito,Pop,03:47,4.3,Luis?Fonsi-Daddy?Yankee-Zuleyka 
+Believer,Rock,03:37,5.0,Dan?Reynolds-Wayne?Sermon 
+Male 
+
+Enter?the?number?of?songs: 
+Enter?the?gender?of?singer: 
+The?best?Male?singer?is?Ed?Sheeran 
+
+General 
+
+ 
+
+3 
+
+s4 
+
+5 
+Shape?of?You,Pop,03:53,4.9,Shawn?Mendes-Frankie?Dunne 
+Perfect,Classical,04:23,4.2,Luis?Fonsi-Daddy?Yankee-Zuleyka 
+Treat?you?better,Rock,04:01,4.6,Luis?Fonsi-Daddy?Yankee-Zuleyka 
+Despacito,Pop,03:47,4.3,Luis?Fonsi-Daddy?Yankee-Zuleyka 
+Believer,Rock,03:37,5.0,Shawn?Mendes-Frankie?Dunne 
+Male 
+
+Enter?the?number?of?songs: 
+Enter?the?gender?of?singer: 
+The?best?Male?singer?is?Shawn?Mendes 
+
+General 
+
+ 
+
+4 
+
+s2 
+
+5 
+Walking the wire,Pop,3:52,4.7,Ed Sheeran-Beyonce-Zoey 
+Castle on hill,Rock,03:20,4.5,Dan Reynolds-Wayne?Sermon 
+Mercy,Pop,03:11,4.3,Shawn Mendes-Frankie?Dunne 
+Ruin,SynthPop,04:03,4.8,Ed Sheeran-Beyonce-Zoey 
+Galway Girl,Pop,02:50,4.6,Ed Sheeran-Steve Mac-Burruss 
+Female 
+
+Enter?the?number?of?songs: 
+Enter?the?gender?of?singer: 
+The?best?Female?singer?is?Beyonce 
+
+General 
+
+ 
+
+5 
+
+s5 
+
+5 
+Walking the wire,Pop,3:52,4.3,Ed Sheeran-Beyonce-Zoey 
+Castle on hill,Rock,03:20,4.6,Dan Reynolds-Wayne Sermon 
+Mercy,Pop,03:11,4.3,Shawn Mendes-Frankie Dunne 
+Ruin,SynthPop,04:03,4.2,Ed Sheeran-Beyonce-Zoey 
+Galway Girl,Pop,02:50,4.1,Ed Sheeran-Steve Mac-Burruss 
+Male 
+
+Enter?the?number?of?songs: 
+Enter?the?gender?of?singer: 
+The?best?Male?singer?is?Dan?Reynolds 
+
+General 
+
+ 
+
+ 
+
+? 
+
+Music Aggregator - Requirement 6 
+
+ 
+ 
+Requirement 6: 
+In this requirement, we are gonna filter songs based on artist name and genre or released year and genre. 
+ 
+a) Create a class?Song?with the following private attributes:? 
+
+Member Field Name 
+
+Type 
+
+title 
+
+String 
+
+genre 
+
+String 
+
+duration 
+
+Date 
+
+rating 
+
+Double 
+
+album 
+
+Album 
+
+artistList 
+
+List<Artist> 
+
+ 
+Mark all the attributes as private, Create / Generate appropriate Getters & Setters,?
+Add a default constructor and a parameterized constructor to take in all attributes in the given order:??
+public Song(String title, String genre, Date duration, Double rating, Album album, List<Artist> artistList)? 
+ 
+b) Create a class?Artist?with the following private attributes:? 
+
+Member Field Name 
+
+Type 
+
+name 
+
+String 
+
+role 
+
+String 
+
+gender 
+
+String 
+
+dob 
+
+Date 
+
+songList 
+
+List<Song> 
+
+ 
+Mark all the attributes as private, Create / Generate appropriate Getters & Setters,?A
+dd a default constructor and a parameterized constructor to take in all attributes in the given order:?public 
+Artist(String name, String role, String gender, Date dob, List<Song> songList) 
+ 
+
+c) Create a class?Album?with the following private attributes:? 
+
+Member Field Name 
+
+Type 
+
+name 
+
+String 
+
+releasedYear 
+
+Date 
+
+songList 
+
+List<Song> 
+
+ 
+Mark all the attributes as private, Create / Generate appropriate Getters & Setters,?Add a default constructor 
+and a parameterized constructor to take in all attributes in the given order:?public Album(String name, Date releasedYear, List<Song> songList) 
+ 
+d) Create the following static method in?Artist?class,? 
+
+Method Name 
+
+Description 
+
+public static List<Artist> prefill() 
+
+this method returns the list of prefilled artists (given in the template) 
+
+ 
+e) Create the following static method in?Album?class,? 
+
+Method Name 
+
+Description 
+
+public static List<Album> prefill() 
+
+this method returns the list of prefilled albums (given in the template) 
+
+ 
+f) Create a class?SongBO?with the following methods,? 
+
+Method Name 
+
+Description 
+
+public List<Song> findSong(List<Song> songList,String name,String genre) 
+
+This method accepts a list of songs and artist name, genre as arguments and returns a list of songs that matches with the given artist name and genre. 
+
+public List<Song> findSong(List<Song> songList,Date releasedYear,String genre) 
+
+This method accepts a list of songs and released year, genre as arguments and returns a list of songs that matches with the given released year and genre. 
+
+ 
+ 
+The song details must be given as comma-separated value as given below, 
+title,genre,duration,rating,albumName,artist1-artist2-...-artistn 
+ 
+The artist name list is given in "-" separated format. 
+The print statements should be in main method.? 
+Duration of the song is given in minutes & seconds.? 
+ 
+Print format:? 
+System.out.format("%-15s %-15s %-12s %s\n", "Title", "Genre", "Rating", "Album");? 
+ 
+Note:?The song lists?are displayed in the?main method. 
+? ? ? ? ? ? If any other choice is selected, display "Invalid choice" 
+? ? ? ? ? ? If the search detail is not found, display "No such song is present" 
+??????????? Display one digit after the decimal point for Double Datatype.? 
+ 
+Sample Input and Output:? 
+ 
+Enter the number of songs? 
+5 
+Shape of You,Pop,03:53,4.9,Divide,Ed Sheeran-Steve Mac-Burruss 
+Closer,Pop,04:04,4.1,Collage,Ed Sheeran-Beyonce-Zoey 
+Something,Rock,04:07,4.0,Memories,Andrew-Chris Martin 
+Dangerous,Pop,03:23,4.2,Listen,David Guetta-Sam Martin 
+Faded,Rock,03:32,4.8,Faded,Alan Walker-Jesper 
+Enter a search type:
+1.By Released year and Genre 
+2.By Artist and Genre 
+1? 
+Enter the Released year and Genre:? 
+2014 
+Rock? 
+
+Title 
+
+Genre 
+
+Rating 
+
+Album 
+
+Something 
+
+Rock 
+
+4.0 
+
+Memories 
+
+Faded 
+
+Rock 
+
+4.8 
+
+Faded 
+
+? 
+
+????Test Cases 
+
+Assign Groups? 
+
+SNo 
+
+Name 
+
+Input 
+
+Output 
+
+Purpose 
+
+Sample 
+
+1 
+
+TC1 
+
+5 
+Shape?of?You,Pop,03:53,4.9,Divide,Ed?Sheeran-Steve?Mac-Burruss 
+Closer,Pop,04:04,4.1,Collage,Ed?Sheeran-Beyonce-Zoey 
+Something,Rock,04:07,4.0,Memories,Andrew-Chris?Martin 
+Dangerous,Pop,03:23,4.2,Listen,David?Guetta-Sam?Martin 
+Faded,Rock,03:32,4.8,Faded,Alan?Walker-Jesper 
+1 
+2014 
+Rock 
+
+Enter?the?number?of?songs 
+Enter?a?search?type: 
+1.By?Released?year?and?Genre 
+2.By?Artist?and?Genre 
+Enter?the?Released?year?and?Genre: 
+Title???????????Genre???????????Rating???????Album 
+Something???????Rock????????????4.0??????????Memories 
+Faded???????????Rock????????????4.8??????????Faded 
+
+General 
+
+ 
+
+2 
+
+TC5 
+
+10 
+Treat?you?better,Rock,04:01,3.6,Illuminate,Shawn?Mendes-Frankie?Dunne 
+Ruin,Pop,04:03,3.4,Illuminate,Shawn?Mendes-Frankie?Dunne 
+Mercy,Pop,03:11,3.4,Illuminate,Shawn?Mendes-Frankie?Dunne 
+Thunder,Pop,03:07,4.7,Evolve,Dan?Reynolds-Wayne?Sermon 
+Walking?the?wire,Pop,3:52,3.7,Evolve,Dan?Reynolds-Wayne?Sermon 
+Perfect,Classical,04:23,4.6,Divide,Ed?Sheeran-Steve?Mac-Burruss 
+Galway?Girl,Pop,02:50,4.4,Divide,Ed?Sheeran-Steve?Mac-Burruss 
+Castle?on?hill,Rock,03:20,3.5,Divide,Ed?Sheeran-Steve?Mac-Burruss 
+Radioactive,Rock,03:05,4.5,Night?Visions,Dan?Reynolds-Wayne?Sermon 
+Demons,Rock,02:58,4.6,Night?Visions,Dan?Reynolds-Wayne?Sermon 
+-1 
+
+Enter?the?number?of?songs 
+Enter?a?search?type: 
+1.By?Released?year?and?Genre 
+2.By?Artist?and?Genre 
+Invalid?choice 
+
+General 
+
+ 
+
+3 
+
+TC6 
+
+10 
+Shape?of?You,Pop,03:53,4.9,Divide,Ed?Sheeran-Steve?Mac-Burruss 
+Closer,Pop,04:04,4.1,Collage,Ed?Sheeran-Beyonce-Zoey 
+Something,Rock,04:07,4.0,Memories,Andrew-Chris?Martin 
+Dangerous,Pop,03:23,4.2,Listen,David?Guetta-Sam?Martin 
+Faded,Rock,03:32,4.8,Faded,Alan?Walker-Jesper 
+Believer,Rock,03:37,5.0,Evolve,Dan?Reynolds-Wayne?Sermon 
+Despacito,Pop,03:47,4.3,Despacito,Luis?Fonsi-Daddy?Yankee-Zuleyka 
+Numb,Rock,03:08,3.9,Meteora,Rob-Joe 
+Cheap?Thrills,Pop,03:30,3.8,Cheap?thrills,Sia-Maddie 
+Treat?you?better,Rock,04:01,3.6,Illuminate,Shawn?Mendes-Frankie?Dunne 
+1 
+2015 
+Pop 
+
+Enter?the?number?of?songs 
+Enter?a?search?type: 
+1.By?Released?year?and?Genre 
+2.By?Artist?and?Genre 
+Enter?the?Released?year?and?Genre: 
+Title???????????Genre???????????Rating???????Album 
+Shape?of?You????Pop?????????????4.9??????????Divide 
+Cheap?Thrills???Pop?????????????3.8??????????Cheap?thrills 
+
+General 
+
+ 
+
+4 
+
+TC3 
+
+5 
+Shape?of?You,Pop,03:53,4.9,Divide,Ed?Sheeran-Steve?Mac-Burruss 
+Closer,Pop,04:04,4.1,Collage,Ed?Sheeran-Beyonce-Zoey 
+Something,Rock,04:07,4.0,Memories,Andrew-Chris?Martin 
+Dangerous,Pop,03:23,4.2,Listen,David?Guetta-Sam?Martin 
+Faded,Rock,03:32,4.8,Faded,Alan?Walker-Jesper 
+100 
+
+Enter?the?number?of?songs 
+Enter?a?search?type: 
+1.By?Released?year?and?Genre 
+2.By?Artist?and?Genre 
+Invalid?choice 
+
+General 
+
+ 
+
+5 
+
+TC8 
+
+10 
+Treat?you?better,Rock,04:01,3.6,Illuminate,Shawn?Mendes-Frankie?Dunne 
+Ruin,Pop,04:03,3.4,Illuminate,Shawn?Mendes-Frankie?Dunne 
+Mercy,Pop,03:11,3.4,Illuminate,Shawn?Mendes-Frankie?Dunne 
+Thunder,Pop,03:07,4.7,Evolve,Dan?Reynolds-Wayne?Sermon 
+Walking?the?wire,Pop,3:52,3.7,Evolve,Dan?Reynolds-Wayne?Sermon 
+Perfect,Classical,04:23,4.6,Divide,Ed?Sheeran-Steve?Mac-Burruss 
+Galway?Girl,Pop,02:50,4.4,Divide,Ed?Sheeran-Steve?Mac-Burruss 
+Castle?on?hill,Rock,03:20,3.5,Divide,Ed?Sheeran-Steve?Mac-Burruss 
+Radioactive,Rock,03:05,4.5,Night?Visions,Dan?Reynolds-Wayne?Sermon 
+Demons,Rock,02:58,4.6,Night?Visions,Dan?Reynolds-Wayne?Sermon 
+1 
+2012 
+Rock 
+
+Enter?the?number?of?songs 
+Enter?a?search?type: 
+1.By?Released?year?and?Genre 
+2.By?Artist?and?Genre 
+Enter?the?Released?year?and?Genre: 
+Title???????????Genre???????????Rating???????Album 
+Radioactive?????Rock????????????4.5??????????Night?Visions 
+Demons??????????Rock????????????4.6??????????Night?Visions 
+
+General 
+
+ 
+
+6 
+
+TC7 
+
+10 
+Treat you better,Rock,04:01,3.6,Illuminate,Shawn Mendes-Frankie Dunne 
+Ruin,Pop,04:03,3.4,Illuminate,Shawn Mendes-Frankie Dunne 
+Mercy,Pop,03:11,3.4,Illuminate,Shawn Mendes-Frankie Dunne 
+Thunder,Pop,03:07,4.7,Evolve,Dan Reynolds-Wayne Sermon 
+Walking the wire,Pop,3:52,3.7,Evolve,Dan Reynolds-Wayne Sermon 
+Perfect,Classical,04:23,4.6,Divide,Ed Sheeran-Steve Mac-Burruss 
+Galway Girl,Pop,02:50,4.4,Divide,Ed?Sheeran-Steve Mac-Burruss 
+Castle on hill,Rock,03:20,3.5,Divide,Ed?Sheeran-Steve Mac-Burruss 
+Radioactive,Rock,03:05,4.5,Night Visions,Dan Reynolds-Wayne Sermon 
+Demons,Rock,02:58,4.6,Night Visions,Dan Reynolds-Wayne Sermon 
+2 
+Wayne Sermon 
+Rock 
+
+Enter?the?number?of?songs 
+Enter?a?search?type: 
+1.By?Released?year?and?Genre 
+2.By?Artist?and?Genre 
+Enter?the?artist?name?and?Genre: 
+Title???????????Genre???????????Rating???????Album 
+Radioactive?????Rock????????????4.5??????????Night?Visions 
+Demons??????????Rock????????????4.6??????????Night?Visions 
+
+General 
+
+ 
+
+7 
+
+TC2 
+
+5 
+Shape?of?You,Pop,03:53,4.9,Divide,Ed?Sheeran-Steve?Mac-Burruss 
+Closer,Pop,04:04,4.1,Collage,Ed?Sheeran-Beyonce-Zoey 
+Something,Rock,04:07,4.0,Memories,Andrew-Chris?Martin 
+Dangerous,Pop,03:23,4.2,Listen,David?Guetta-Sam?Martin 
+Faded,Rock,03:32,4.8,Faded,Alan?Walker-Jesper 
+2 
+Ed?sheeran 
+Pop 
+
+Enter?the?number?of?songs 
+Enter?a?search?type: 
+1.By?Released?year?and?Genre 
+2.By?Artist?and?Genre 
+Enter?the?artist?name?and?Genre: 
+Title???????????Genre???????????Rating???????Album 
+Shape?of?You????Pop?????????????4.9??????????Divide 
+Closer??????????Pop?????????????4.1??????????Collage 
+
+General 
+
+ 
+
+8 
+
+TC4 
+
+5 
+Shape?of?You,Pop,03:53,4.9,Divide,Ed?Sheeran-Steve?Mac-Burruss 
+Closer,Pop,04:04,4.1,Collage,Ed?Sheeran-Beyonce-Zoey 
+Something,Rock,04:07,4.0,Memories,Andrew-Chris?Martin 
+Dangerous,Pop,03:23,4.2,Listen,David?Guetta-Sam?Martin 
+Faded,Rock,03:32,4.8,Faded,Alan?Walker-Jesper 
+1 
+1900 
+Melody 
+
+Enter?the?number?of?songs 
+Enter?a?search?type: 
+1.By?Released?year?and?Genre 
+2.By?Artist?and?Genre 
+Enter?the?Released?year?and?Genre: 
+No?such?song?is?present 
+
+General 
+
+ 
+
+ 
+
+? 
+
+ 
